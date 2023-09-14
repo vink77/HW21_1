@@ -17,11 +17,11 @@
 
 5 Заполнить базу данных командой в терминале:
 ```shell
-   pithon manage.py fill
+   python manage.py fill
 ```
 6 Запустить сервер командой в терминале:
 
 ```shell
-   pithon manage.py runserver
+   python manage.py runserver
 ```
 7 Перейти по ссылке 127.0.0.1
