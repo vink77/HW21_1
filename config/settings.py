@@ -121,6 +121,10 @@ USE_TZ = True
 
 # Отвечает за формирование адреса доступа к статике
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
 # Отвечает за место на диске, откуда необходимо подгружать статику
 STATICFILES_DIRS = (
     BASE_DIR / 'static',
