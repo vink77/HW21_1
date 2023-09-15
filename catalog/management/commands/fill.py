@@ -38,6 +38,7 @@ class Command(BaseCommand):
                     pk=item['pk'],
                     product_name=item['fields']['product_name'],
                     product_description = item['fields']['product_description'],
+                    avatar=item['fields']['avatar'],
                     category=cat,
                     price=item['fields']['price'],
                     date_create = item['fields']['date_create'],
