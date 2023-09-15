@@ -13,5 +13,8 @@ def index(request):
     return render(request, 'catalog/index.html', context=context)
 
 
-def info(request):
+def contacts(request):
+    return render(request,'catalog/contacts.html')
+
+def info1(request):
     return render(request,'catalog/info1.html')
