@@ -10,13 +10,13 @@
                     <h4 class="my-0 font-weight-normal">{{product.category|title}} {{product.product_name|title}}</h4>
                 </div>
                 <div class="card-body">
-                     <img src="media/{{product.avatar}}" alt="" style="max-width: 50%;">
+                     <img src="media/{{product.avatar }}" alt="" style="max-width: 50%;">
                     <h1 class="card-title pricing-card-title">{{product.price|floatformat:2}} руб.</h1>
                     <ul class="list-unstyled mt-3 mb-4 text-start m-3">
                         <li>- {{product.product_description|truncatechars:100}}</li>
 
                     </ul>
-                            <a class="p-1  btn btn-outline-primary form-control" href="/info1/">Купить</a>
+                            <a class="p-1  btn btn-outline-primary form-control" href="{% url 'catalog:info1' %}">Купить</a>
 
                 </div>
             </div>

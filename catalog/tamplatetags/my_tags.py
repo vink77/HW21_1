@@ -5,7 +5,7 @@ import datetime
 register = template.Library()
 
 
-@register.filter
+@register.filter()
 def media_url(value):
     """
     Фильтр для преобразования пути в полный путь для доступа к медиафайлу.
