@@ -1,27 +1,24 @@
 {% extends 'catalog/base.html' %}
-{% block title %} Блог {% endblock %}
 {% block content %}
 
 <div class="container">
     <div class="row justify-content-center mb-5">
-        <div class="col-md-12">
+        <div class="col-md-2">
             <a class="btn btn-primary btn-block" href="{% url 'blog:create' %}">Добавить запись</a>
         </div>
     </div>
-    <h1>Список блоговых записей</h1>
+    <h1>Список записей</h1>
 
     <ul>
-        {% for post in posts %}
+        {% for object in objects %}
         <li>
-            <h2><a href="/">{{ post.title }}</a></h2>
-            <p>{{ post.content }}</p>
-            <p>Просмотры: {{ post.views_count }}</p>
-            <a href="{% url 'blog:view' post.pk %}" class="btn btn-primary">Подробнее</a>
-            <a href="{% url 'blog:update' post.pk %}" class="btn btn-success">Редактировать</a>
-            <a href="{% url 'blog:delete' post.pk %}" class="btn btn-danger">Удалить</a>
+            <h2><a href="{% url 'blog:detail' object.pk %}">{{ object.title }}</a></h2>
+            <p>{{ object.context }}</p>
+            <p>Просмотры: {{ object.view_count }}</p>
+            <a href="{% url 'blog:detail' object.pk %}" class="btn btn-secondary">View</a>
+            <a href="{% url 'blog:update' object.pk %}" class="btn btn-secondary">Edit</a>
+            <a href="{% url 'blog:delete' object.pk %}" class="btn btn-secondary">Delete</a>
         </li>
-        {% empty %}
-        <p>Пока нет ни одной записи.</p>
         {% endfor %}
     </ul>
 </div>

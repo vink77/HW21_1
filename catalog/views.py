@@ -25,21 +25,23 @@ def info1(request):
 
 class ProductCreateView(CreateView):
     model = Product, Category
-    fields = ('product_name', 'product_description', 'category', 'price', 'quantity_product', 'date_create','date_last_change')
-    success_url = reverse_lazy('catalog:create')
+    fields = ('product_name', 'product_description')
+    success_url = reverse_lazy('catalog:list')
 
 class ProductUpdateView(UpdateView):
     model = Product, Category
     fields = ('product_name', 'product_description', 'category', 'price', 'quantity_product', 'date_create','date_last_change')
-    success_url = reverse_lazy('catalog:update')
+    success_url = reverse_lazy('catalog:list')
 
 class ProductListView(ListView):
     model = Product
-    success_url = reverse_lazy('catalog:detail')
+    template_name = 'catalog/catalog.html'
+    context_object_name = 'products'
 
 class ProductDetailView(DetailView):
     model = Product
     template_name = 'catalog/product_detail.html'
+    context_object_name = 'product'
     def get_object(self, queryset=None):
         self.object = super().get_object(queryset)
         self.object.views_count +=1
