@@ -8,6 +8,7 @@
       "avatar":  "products/noutbook.jpg",
       "category": 6,
       "price": 80000,
+      "quantity_product": 5,
       "date_create": "2023-09-13",
       "date_last_change": "2023-09-14"
     }
@@ -21,6 +22,7 @@
       "avatar":  "products/micro.jpg",
       "category": 5,
       "price": 5000,
+      "quantity_product": 5,
       "date_create": "2023-09-13",
       "date_last_change": "2023-09-13"
     }
@@ -34,6 +36,7 @@
       "avatar":  "products/smartphone.jpg",
       "category": 2,
       "price": 50000,
+      "quantity_product": 5,
       "date_create": "2023-09-13",
       "date_last_change": "2023-09-13"
     }
@@ -47,6 +50,7 @@
       "avatar":  "products/пылесос.png",
       "category": 7,
       "price": 27,
+      "quantity_product": 5,
       "date_create": "2023-09-13",
       "date_last_change": "2023-09-13"
     }
@@ -60,6 +64,7 @@
       "avatar":  "products/printer.jpg",
       "category": 4,
       "price": 20000,
+      "quantity_product": 5,
       "date_create": "2023-09-13",
       "date_last_change": "2023-09-13"
     }
@@ -73,6 +78,7 @@
       "avatar":  "products/tv.jpg",
       "category": 1,
       "price": 50000,
+      "quantity_product": 5,
       "date_create": "2023-09-13",
       "date_last_change": "2023-09-13"
     }

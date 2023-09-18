@@ -41,8 +41,9 @@ class Command(BaseCommand):
                     avatar=item['fields']['avatar'],
                     category=cat,
                     price=item['fields']['price'],
+                    quantity_product=item['fields']['quantity_product'],
                     date_create = item['fields']['date_create'],
-                    date_last_change=item['fields']['date_last_change']
+                    date_last_change=item['fields']['date_last_change'],
                 )
 
 
