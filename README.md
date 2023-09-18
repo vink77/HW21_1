@@ -15,8 +15,14 @@
 ```shell
    pip install -r requirements.txt
 ```
-4 Установить базу данных postgres и менеджер pgAdmin4.  
-    Создать базу данных DB_magazin
+4 Установить базу данных postgres и менеджер pgAdmin4. 
+    Создать и импортировать миграции
+```shell
+    python manage.py makemigrations
+  ```
+```shell
+    python manage.py migrate 
+```
 
 5 Заполнить базу данных командой в терминале:
 ```shell

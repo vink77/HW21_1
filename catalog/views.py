@@ -24,13 +24,13 @@ def info1(request):
     return render(request,'catalog/info1.html')
 
 class ProductCreateView(CreateView):
-    model = Product
-    fields = ('product_name', 'product_description', 'price', 'quantity_product', 'date_create','date_last_change')
+    model = Product, Category
+    fields = ('product_name', 'product_description', 'category', 'price', 'quantity_product', 'date_create','date_last_change')
     success_url = reverse_lazy('catalog:create')
 
 class ProductUpdateView(UpdateView):
-    model = Product
-    fields = ('product_name', 'product_description', 'price', 'quantity_product', 'date_create','date_last_change')
+    model = Product, Category
+    fields = ('product_name', 'product_description', 'category', 'price', 'quantity_product', 'date_create','date_last_change')
     success_url = reverse_lazy('catalog:update')
 
 class ProductListView(ListView):
@@ -45,6 +45,8 @@ class ProductDetailView(DetailView):
         self.object.views_count +=1
         self.object.save()
         return self.object
+
+
 
 class ProductDeleteView(DeleteView):
     model = Product
