@@ -30,7 +30,7 @@ class ProductCreateView(CreateView):
 
 class ProductUpdateView(UpdateView):
     model = Product, Category
-    fields = ('product_name', 'product_description', 'category', 'price', 'quantity_product', 'date_create','date_last_change')
+    fields = ('product_name', 'product_description')
     success_url = reverse_lazy('catalog:list')
 
 class ProductListView(ListView):

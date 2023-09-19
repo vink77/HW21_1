@@ -19,7 +19,7 @@ urlpatterns = [
     path('create/', ProductCreateView.as_view(), name='create'),
     path('', ProductListView.as_view(), name='list'),
     path('view/<int:pk>/', ProductDetailView.as_view(), name='detail'),
-    path('edit/<int:pk>/', ProductUpdateView.as_view(), name='update'),
+    path('update/<int:pk>/', ProductUpdateView.as_view(), name='update'),
     path('delete/<int:pk>/', ProductDeleteView.as_view(), name='delete'),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

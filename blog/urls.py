@@ -10,8 +10,8 @@ app_name = BlogModelConfig.name
 urlpatterns = [
     path('', BlogListView.as_view(), name='list'),
     path('create/', BlogCreateView.as_view(), name='create'),
-    path('detail/<pk>/', BlogDetailView.as_view(), name='detail'),
-    path('update/<pk>/', BlogUpdateView.as_view(), name='update'),
-    path('delete/<pk>/', BlogDeleteView.as_view(), name='delete'),
+    path('detail/<int:pk>', BlogDetailView.as_view(), name='detail'),
+    path('edit/<int:pk>/', BlogUpdateView.as_view(), name='edit'),
+    path('delete/<int:pk>/', BlogDeleteView.as_view(), name='delete'),
 
 ]
