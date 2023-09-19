@@ -14,7 +14,7 @@ class Blog(models.Model):
     now = datetime.now()
     current_time = now.strftime("%Y-%m-%d")
     date_create = models.DateField(verbose_name='Дата создания', default=current_time)
-    sign_of_publication = models.BooleanField(verbose_name='Признак публикации', default=True)
+    is_published = models.BooleanField(verbose_name='Признак публикации', default=True)
 
     view_count = models.IntegerField(default=0, verbose_name='просмотры')
     slug = models.CharField(max_length=150, verbose_name='slug', **NULLABLE)

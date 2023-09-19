@@ -1,7 +1,4 @@
-from django.shortcuts import render
-
 # Create your views here.
-from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
 
 from blog.models import Blog
@@ -28,8 +25,8 @@ class BlogCreateView(CreateView):
 class BlogUpdateView(UpdateView):
     model = Blog
     fields = ('title', 'conteхt')
+    context_object_name = 'object'
     success_url = reverse_lazy('blog:list')
-    context_object_name = 'object_list'
 
     def get_success_url(self):
         return reverse('blog:detail', args=[self.kwargs.get('slug')])
@@ -40,12 +37,15 @@ class BlogListView(ListView):
     template_name = 'blog:blog_list'
     context_object_name = 'object_list'
 
+    def get_queryset(self):
+       return Blog.objects.filter(is_published=True)
+
 
 class BlogDetailView(DetailView):
     model = Blog
     template_name = 'blog/blog_detail.html'
-    context_object_name = 'object_list'
-    success_url = reverse_lazy('blog:list')
+    context_object_name = 'object'
+  #  success_url = reverse_lazy('blog:list')
 
     def get_object(self, queryset=None):
         self.object = super().get_object(queryset)
