@@ -10,7 +10,7 @@
     <h1>Список записей</h1>
 
     <ul>
-        {% for object in objects %}
+        {% for object in object_list %}
         <li>
             <h2><a href="{% url 'blog:detail' object.pk %}">{{ object.title }}</a></h2>
             <p>{{ object.context }}</p>
